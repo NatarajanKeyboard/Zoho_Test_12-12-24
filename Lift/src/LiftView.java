@@ -10,9 +10,14 @@ public class LiftView {
     public void init(int[] liftArray, int source, int destination)
     {
         displayLiftPosition(liftArray, source, destination,null);
-        liftModel.assignLift(liftArray, source, destination);
+        // liftModel.assignLift(liftArray, source, destination);
         //after assigning
+        // displayLiftPosition(liftArray, source, destination,liftModel.getAssignedLift());
+
+        //after assigning nearest lift
+        liftModel.assignNearestLift(liftArray, source, destination);
         displayLiftPosition(liftArray, source, destination,liftModel.getAssignedLift());
+
     }
 
 
